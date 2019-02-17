@@ -1,0 +1,525 @@
+dn: dc=edt,dc=org
+dc: edt
+description: Escola del treball de Barcelona
+objectClass: dcObject
+objectClass: organization
+o: edt.org
+
+dn: ou=groups,dc=edt,dc=org
+ou: groups
+description: Container per a groups
+objectclass: organizationalunit
+
+dn: ou=politics,dc=edt,dc=org
+ou: politics
+description: Container per a politics
+objectclass: organizationalunit
+
+dn: ou=corruptes,dc=edt,dc=org
+ou: corruptes
+description: Container per a corruptes
+objectclass: organizationalunit
+
+
+dn: cn=usuaris,ou=groups,dc=edt,dc=org
+description: Container per usuaris del sistema linux
+objectclass: top
+objectclass: posixGroup
+gidNumber: 10000
+cn: usuaris
+memberUid: pau
+memberUid: pere
+memberUid: anna
+memberUid: marta
+memberUid: jordi
+memberUid: admin
+memberUid: user01
+memberUid: user02
+memberUid: user03
+memberUid: user04
+memberUid: user05
+memberUid: user06
+memberUid: user07
+memberUid: user08
+memberUid: user09
+memberUid: user10
+
+dn: cn=clients,ou=groups,dc=edt,dc=org
+description: Container per clients del sistema linux
+objectclass: top
+objectclass: posixGroup
+gidNumber: 10001
+cn: clients
+memberUid: mao
+memberUid: ho
+memberUid: hiro
+memberUid: nelson
+memberUid: robert
+memberUid: ali
+memberUid: konrad
+memberUid: humphrey
+memberUid: carles
+memberUid: francisco
+memberUid: vladimir
+memberUid: jorge
+
+dn: cn=maquines,ou=groups,dc=edt,dc=org
+description: Container per maquines del sistema linux
+objectclass: top
+objectclass: posixGroup
+gidNumber: 10002
+cn: maquines
+
+dn: cn=productes,ou=groups,dc=edt,dc=org
+description: Container per productes del sistema linux
+objectclass: top
+objectclass: posixGroup
+gidNumber: 10003
+cn: productes
+
+
+dn: uid=pau,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Pau Pou
+cn: Pauet Pou
+sn: Pou
+homephone: 555-222-2220
+mail: pau@edt.org
+description: Watch out for this guy
+ou: Profes
+uid: pau
+uidNumber: 5000
+gidNumber: 10000
+homeDirectory: /tmp/home/pau
+userPassword: {SSHA}NDkipesNQqTFDgGJfyraLz/csZAIlk2/
+
+dn: uid=pere,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Pere Pou
+sn: Pou
+homephone: 555-222-2221
+mail: pere@edt.org
+description: Watch out for this guy
+ou: Profes
+uid: pere
+uidNumber: 5001
+gidNumber: 10000
+homeDirectory: /tmp/home/pere
+userPassword: {SSHA}ghmtRL11YtXoUhIP7z6f7nb8RCNadFe+
+
+dn: uid=anna,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Anna Pou
+cn: Anita Pou
+sn: Pou
+homephone: 555-222-2222
+mail: anna@edt.org
+description: Watch out for this girl
+ou: Alumnes
+uid: anna
+uidNumber: 5002
+gidNumber: 10000
+homeDirectory: /tmp/home/anna
+userPassword: {SSHA}Bm4B3Bu/fuH6Bby9lgxfFAwLYrK0RbOq
+
+dn: uid=marta,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Marta Mas
+sn: Mas
+homephone: 555-222-2223
+mail: marta@edt.org
+description: Watch out for this girl
+ou: Alumnes
+uid: marta
+uidNumber: 5003
+gidNumber: 10000
+homeDirectory: /tmp/home/marta
+userPassword: {SSHA}9+1F2f5vcW8z/tmSzYNWdlz5GbDCyoOw
+
+dn: uid=jordi,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Jordi Mas
+cn: Giorgios Mas
+sn: Mas
+homephone: 555-222-2224
+mail: jordi@edt.org
+description: Watch out for this girl
+ou: Alumnes
+ou: Profes
+uid: jordi
+uidNumber: 5004
+gidNumber: 10000
+homeDirectory: /tmp/home/jordi
+userPassword: {SSHA}T5jrMgpJwZZgu0azkLIVoYhiG08/KGUv
+
+dn: uid=admin,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Administrador Sistema
+cn: System Admin
+sn: System
+homephone: 555-222-2225
+mail: anna@edt.org
+description: Watch out for this girl
+ou: system
+ou: admin
+uid: admin
+uidNumber: 10
+gidNumber: 10000
+homeDirectory: /tmp/home/admin
+userPassword: {SSHA}4mS0FycWc5bkpW8/a396SGNDTQUlFSX3
+
+
+dn: uid=user01,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user01
+cn: alumne01 de 1asix de todos los santos
+sn: alumne01
+homephone: 555-222-0001
+mail: user01@edt.org
+description: alumne de 1asix
+ou: 1asix
+uid: user01
+uidNumber: 7001
+gidNumber: 10000
+homeDirectory: /tmp/home/1asix/user01
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user02,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user02
+cn: alumne02 Pou Prat
+sn: alumne02
+homephone: 555-222-0002
+mail: user02@edt.org
+description: alumne de 1asix
+ou: 1asix
+uid: user02
+uidNumber: 7002
+gidNumber: 10000
+homeDirectory: /tmp/home/1asix/user02
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user03,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user03
+cn: alumne03 Pou Prat
+sn: alumne03
+homephone: 555-222-0003
+mail: user03@edt.org
+description: alumne de 1asix
+ou: 1asix
+uid: user02
+uidNumber: 7003
+gidNumber: 10000
+homeDirectory: /tmp/home/1asix/user03
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user04,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user04
+cn: alumne04 Pou Puig
+sn: alumne04
+homephone: 555-222-0004
+mail: user04@edt.org
+description: alumne de 1asix
+ou: 1asix
+uid: user04
+uidNumber: 7004
+gidNumber: 10000
+homeDirectory: /tmp/home/1asix/user04
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user05,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user05
+cn: alumne05 Pou Prat
+sn: alumne05
+homephone: 555-222-0005
+mail: user05@edt.org
+description: alumne de 1asix
+ou: 1asix
+uid: user05
+uidNumber: 7005
+gidNumber: 10000
+homeDirectory: /tmp/home/1asix/user05
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user06,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user06
+cn: alumne06 de 2asix de todos los santos
+sn: alumne06
+homephone: 555-222-0006
+mail: user06@edt.org
+description: alumne de 2asix
+ou: 2asix
+uid: user06
+uidNumber: 7006
+gidNumber: 10000
+homeDirectory: /tmp/home/2asix/user06
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user07,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user07
+cn: alumne07 de 2asix de todos los santos
+sn: alumne07
+homephone: 555-222-0007
+mail: user07@edt.org
+description: alumne de 2asix
+ou: 2asix
+uid: user07
+uidNumber: 7007
+gidNumber: 10000
+homeDirectory: /tmp/home/2asix/user07
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user08,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user08
+cn: alumne08 de 2asix de todos los santos
+sn: alumne08
+homephone: 555-222-0008
+mail: user08@edt.org
+description: alumne de 2asix
+ou: 2asix
+uid: user08
+uidNumber: 7008
+gidNumber: 10000
+homeDirectory: /tmp/home/2asix/user08
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user09,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user09
+cn: alumne09 de 2asix de todos los santos
+sn: alumne09
+homephone: 555-222-0009
+mail: user09@edt.org
+description: alumne de 2asix
+ou: 2asix
+uid: user09
+uidNumber: 7009
+gidNumber: 10000
+homeDirectory: /tmp/home/2asix/user09
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+dn: uid=user10,cn=usuaris,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: user10
+cn: alumne10 de 2asix de todos los santos
+sn: alumne10
+homephone: 555-222-0016
+mail: user10@edt.org
+description: alumne de 2asix
+ou: 2asix
+uid: user10
+uidNumber: 7010
+gidNumber: 10000
+homeDirectory: /tmp/home/2asix/user10
+userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+
+## ----- Clients ----------------------------------------------------------
+
+dn: uid=mao,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: mao tse tung
+cn: mao zedong
+sn: mao
+homephone: 777-222-0001
+mail: mao@asia.edt.org
+description: client de zong guo
+ou: 1wiaw
+uid: mao
+uidNumber: 11001
+gidNumber: 10001
+homeDirectory: /tmp/home/1wiaw/mao
+userPassword: {SHA}89F9x2P5XmKafnH54qLunfQ8h0Y=
+
+dn: uid=ho,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: ho chi minh
+sn: ho
+homephone: 777-222-0002
+mail: ho@asia.edt.org
+description: client de vietnam
+ou: 1wiaw
+uid: ho
+uidNumber: 11002
+gidNumber: 10001
+homeDirectory: /tmp/home/1wiaw/ho
+userPassword: {SHA}mnaoV605m0kroBh50PotcX5EMLI=
+
+dn: uid=hiro,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: hirohito
+sn: hiro
+homephone: 777-222-0003
+mail: hiro@asia.edt.org
+description: client de japo
+ou: 1wiaw
+uid: hiro
+uidNumber: 11003
+gidNumber: 10001
+homeDirectory: /tmp/home/1wiaw/hiro
+userPassword: {SHA}bylNbPKEKAirTNxHDMoNj8jHrKA=
+
+dn: uid=nelson,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: nelson mandela
+cn: madiba
+sn: nelson
+homephone: 778-222-0004
+mail: nelson@africa.edt.org
+description: client de sud africa
+ou: 1wiaw
+uid: nelson
+uidNumber: 11004
+gidNumber: 10001
+homeDirectory: /tmp/home/1wiaw/nelson
+userPassword: {SHA}2RX06XDlNlQgLBz1xi5gpygKghk=
+
+dn: uid=robert,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: robert mugabe
+sn: robert
+homephone: 778-222-0005
+mail: robert@africa.edt.org
+description: client de rodesia, zimbawe
+ou: 1wiaw
+uid: robert
+uidNumber: 11005
+gidNumber: 10001
+homeDirectory: /tmp/home/1wiaw/robert
+userPassword: {SHA}EukpPsazDH+ooJJq9CgH6SnBaE8=
+
+dn: uid=ali,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: ali bey
+cn: domenech badia
+sn: ali
+homephone: 778-222-0006
+mail: ali@africa.edt.org
+description: client de magreb, arabia
+ou: 1wiaw
+uid: ali
+uidNumber: 11006
+gidNumber: 10001
+homeDirectory: /tmp/home/1wiaw/ali
+userPassword: {SHA}tCptk9eWkVIi9v+y/91hN9k8HNs=
+
+dn: uid=konrad,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: konrad adenauer
+sn: konrad
+homephone: 779-222-0007
+mail: konrad@eu.europa.edt.org
+description: client de alemanya
+ou: 2wiaw
+uid: konrad
+uidNumber: 11007
+gidNumber: 10001
+homeDirectory: /tmp/home/2wiaw/konrad
+userPassword: {SHA}v7M/0OfTWcdI9irH59W8m7FgL6k=
+
+dn: uid=humphrey,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: humpprey appleby
+sn: humphrey
+homephone: 779-222-0008
+mail: humprey@eu.europa.edt.org
+description: client de united kingdom
+ou: 2wiaw
+uid: humphrey
+uidNumber: 11008
+gidNumber: 10001
+homeDirectory: /tmp/home/2wiaw/humphrey
+userPassword: {SHA}6WvUsL4qewGBxPBk0xxwZq8jSFk=
+
+dn: uid=carles,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: carles puigdemon
+sn: carles
+homephone: 779-222-0009
+mail: carles@eu.europa.edt.org
+description: client de polonia
+ou: 2wiaw
+uid: carles
+uidNumber: 11009
+gidNumber: 10001
+homeDirectory: /tmp/home/2wiaw/carles
+userPassword: {SHA}N59JHsqofesnS/uN/hTgYniAHVc=
+
+dn: uid=francisco,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: francisco franco bahamonde
+cn: paca
+sn: francisco
+homephone: 779-222-0010
+mail: francisco@noneu.europa.edt.org
+description: client de is different
+ou: 2wiaw
+uid: francisco
+uidNumber: 11010
+gidNumber: 10001
+homeDirectory: /tmp/home/2wiaw/fracisco
+userPassword: {SHA}ExWuYilEQ2eWipQ6IZ843vmoES0=
+
+dn: uid=vladimir,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: vladimir putin
+sn: vladimir
+homephone: 779-222-0011
+mail: vladimir@noneu.europa.edt.org
+description: client de rusia
+ou: 2wiaw
+uid: vladimir
+uidNumber: 11011
+gidNumber: 10001
+homeDirectory: /tmp/home/2wiaw/vladimir
+userPassword: {SHA}3JGGoGB4czkVpvy6s05ZEgvitIQ=
+
+dn: uid=jorge,cn=clients,ou=groups,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: jorge mario bergoglio
+cn: francisco
+cn: papa
+cn: sua santidad
+sn: jorge
+homephone: 779-222-0012
+mail: jorge@noneu.europa.edt.org
+description: client del cel
+ou: 2wiaw
+uid: jorge
+uidNumber: 11012
+gidNumber: 10001
+homeDirectory: /tmp/home/2wiaw/jorge
+userPassword: {SHA}M/knNE4HngDT+kXYgzsE5zUiPuw=

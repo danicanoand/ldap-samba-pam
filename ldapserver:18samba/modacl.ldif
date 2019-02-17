@@ -1,0 +1,7 @@
+dn: olcDatabase={1}bdb,cn=config
+changetype: modify
+delete: olcAccess
+-
+add: olcAccess
+olcAccess: to attrs=userPassword by self write by * auth 
+olcAccess: to * by self read by * search
