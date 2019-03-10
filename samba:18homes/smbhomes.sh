@@ -20,3 +20,4 @@ chown -R 5000.10000 /tmp/home/pau
 chown -R 11011.10001 /tmp/home/2wiaw/vladimir
 chown -R 11010.10001 /tmp/home/2wiaw/fracisco
 chown -R 11009.10001 /tmp/home/2wiaw/carles
+chown -R .10001 /tmp/home/2wiaw

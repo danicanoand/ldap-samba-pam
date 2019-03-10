@@ -89,7 +89,7 @@ base dc=edt,dc=org
 #### Execució
 
 ```
-docker network create sambanet
+docker network create sambanet 
 docker run --rm --name server -h server --network sambanet -d danicano/ldapserver:18samba
 
 docker run --rm --name samba -h samba --network sambanet --privileged -it danicano/samba:18homes
@@ -98,15 +98,31 @@ docker run --rm --name host -h host --network sambanet --privileged -it danicano
 ```
 
 #### Exemple
+
+- Per montar-ho a mà em de veure la ip del samba18:homes en el meu cas **172.19.0.3**
+
+		[root@pc ~]# mount -t cifs -o user=anna,password=anna //172.19.0.3/anna /mnt
+		
+		[root@pc ~]# df -h
+			Filesystem         Size  Used Avail Use% Mounted on
+			//172.19.0.3/anna   45G   28G   15G  65% /mnt
+		
+		[root@local ~]$ mount -t cifs
+			//172.19.0.3/anna on /mnt type cifs (rw,relatime,vers=1.0,cache=strict,username=anna,domain=,uid=0,noforceuid,gid=0,noforcegid,addr=172.19.0.3,unix,posixpaths,serverino,mapposix,acl,rsize=1048576,wsize=65536,echo_interval=60,actimeo=1,user=anna)
 ```
-[root@local ~]# mount -t cifs -o user=anna //172.18.0.3/anna /mnt
-Password for anna@//172.18.0.3/anna:  *******
-
-[root@local ~]$ ll /mnt
-total 4
--rw-r--r--+ 1 5002 10000 3648 Dec 26 11:57 README.md
-
-[root@local ~]$ mount -t cifs
-//172.18.0.3/anna on /mnt type cifs (rw,relatime,vers=1.0,cache=strict,username=anna,domain=,uid=0,noforceuid,gid=0,noforcegid,addr=172.18.0.3,unix,posixpaths,serverino,mapposix,acl,rsize=1048576,wsize=65536,echo_interval=60,actimeo=1,user=anna)
+[root@local ~]# su - pere
+	Creating directory '/tmp/home/pere'.
+	reenter password for pam_mount:
+[pere@host ~]$ su - anna
+	pam_mount password:
+	Creating directory '/tmp/home/anna'.
+[anna@host ~]$ su - francisco
+	pam_mount password:
+	Creating directory '/tmp/home/2wiaw/fracisco'.
+[francisco@host ~]$ ll ../..
+	total 12
+	drwxr-xr-x. 3 root usuaris 4096 Mar 10 11:03 2wiaw
+	drwxr-xr-x. 3 anna usuaris 4096 Mar 10 11:00 anna
+	drwxr-xr-x. 3 pere usuaris 4096 Mar 10 11:00 pere
 ```
 
